@@ -14,11 +14,11 @@ body {
 }
 
 a {
-    color: #3287B2;
+    color: #123445;
 }
 
 a:hover, a:focus {
-    color: #3b98c8;
+    color: #48c849;
     text-decoration: none;
 }
 
@@ -65,7 +65,7 @@ footer {
     width: 260px;
     height: 100%;
     float: left;
-    background-color: #2B333E;
+    background-color: #094fb0;
     position: fixed;
     left: 0;
 }
