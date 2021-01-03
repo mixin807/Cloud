@@ -150,6 +150,7 @@ public class LessonController extends HttpServlet{
 		}
 	}
 
+	//教师端（点击编辑）-->找到该课程修改页面
 	private void teaLessonToUpdate(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String id = request.getParameter("l_id");
 		int l_id = Integer.parseInt(id);

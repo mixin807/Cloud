@@ -14,6 +14,7 @@ import com.education.utils.DataSource;
 public class TeacherDao {
     private static Connection connection = DataSource.getConnection();
 
+    //查询展示所有教师数据
     public List<Teacher> TeacherQuery() {
         String sql = "select * from teacher";
         List<Teacher> list = new ArrayList<>();
@@ -39,6 +40,7 @@ public class TeacherDao {
         return null;
     }
 
+    //添加学生数据
     public boolean addTeacher(Teacher teacher) {
         String sql = "insert into teacher (t_name,t_sex,l_name,t_phone,t_password) values (?,?,?,?,?)";
         PreparedStatement ps = null;
@@ -59,6 +61,7 @@ public class TeacherDao {
         return false;
     }
 
+    //修改教师数据
     public boolean updateTeacher(Teacher teacher) {
         String sql = "update teacher set t_name = ?,t_sex=?,l_name=?,t_phone=?,t_password=? where t_id = ?";
         PreparedStatement ps = null;
@@ -80,6 +83,7 @@ public class TeacherDao {
         return false;
     }
 
+    //删除教师数据
     public boolean deleteTeacher(int id) {
         String sql = "delete from teacher where t_id = ?";
         PreparedStatement ps = null;
@@ -96,6 +100,7 @@ public class TeacherDao {
         return false;
     }
 
+    //通过名字查询展示教师
     public List<Teacher> queryTeacherName(String name) {
         List<Teacher> list = new ArrayList<>();
         String sql = "select * from teacher where t_name = ?";
@@ -122,6 +127,7 @@ public class TeacherDao {
         return null;
     }
 
+    //通过名字查询是否有该教师
     public boolean queryTeacherByName(String name){
         // 1、定义sql语句 占位符?表示一个动态参数入参
         String sql = "select * from teacher where t_name=?";
@@ -144,6 +150,7 @@ public class TeacherDao {
         return false;
     }
 
+    //通过id查找教师
     public Teacher queryTeacherById(int id) {
         String sql = "select * from teacher where t_id = ?";
         PreparedStatement ps = null;

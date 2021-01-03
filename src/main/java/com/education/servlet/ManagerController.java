@@ -47,6 +47,7 @@ public class ManagerController extends HttpServlet {
         }
     }
 
+    //修改管理员数据
     protected void ManagerUpdate(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // 1、接收请求的用户名和密码 根据key来获取
@@ -66,6 +67,7 @@ public class ManagerController extends HttpServlet {
         }
     }
 
+    //通过id找到该管理员-->修改界面
     protected void ManagerToUpdate(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // 1、接收请求的id
@@ -79,6 +81,7 @@ public class ManagerController extends HttpServlet {
         request.getRequestDispatcher("/updateManager.jsp").forward(request, response);
     }
 
+    //删除管理员数据
     protected void ManagerDelete(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // 1、接收请求的id
@@ -90,6 +93,7 @@ public class ManagerController extends HttpServlet {
         request.getRequestDispatcher("/ManagerQuery").forward(request, response);
     }
 
+    //添加管理员
     protected void ManagerInsert(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // 1、接收请求的用户名和密码 根据key来获取
@@ -109,6 +113,7 @@ public class ManagerController extends HttpServlet {
         }
     }
 
+    //管理员登录
     protected void ManagerLogin(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // 1、接收请求的用户名和密码 根据key来获取
@@ -131,12 +136,12 @@ public class ManagerController extends HttpServlet {
         }
     }
 
+    //管理员注册
     protected void ManagerRegister(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // 1、接收请求的用户名和密码 根据key来获取
         String name = request.getParameter("name");
         String password = request.getParameter("password");
-        //String password1 = request.getParameter("password1");
         String email = request.getParameter("email");
         // 2、将用户名和密码封装到Manager的对象中
         Manager manager = new Manager();
@@ -154,6 +159,7 @@ public class ManagerController extends HttpServlet {
         }
     }
 
+    //查询展示管理员
     protected void ManagerQuery(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // 通过调用业务层的代码来操作数据库得到集合数据
@@ -169,6 +175,7 @@ public class ManagerController extends HttpServlet {
         doGet(request, response);
     }
 
+    //注销管理员
     public void ManagerLogOut(HttpServletRequest request,HttpServletResponse response)
             throws ServletException,IOException{
         request.getRequestDispatcher("/page-login.jsp").forward(request,response);

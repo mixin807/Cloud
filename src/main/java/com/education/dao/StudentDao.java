@@ -14,6 +14,7 @@ import com.education.utils.DataSource;
 public class StudentDao {
     public static Connection connection = DataSource.getConnection();
 
+    //查询展示所有学生信息
     public List<Student> CheckAllStudent() {
         List<Student> list = new ArrayList<>();
         String sql = "select * from student";
@@ -42,6 +43,7 @@ public class StudentDao {
         return null;
     }
 
+    //添加学生数据
     public boolean addStudent(Student student) {
         String sql = "insert into student(s_name , s_sex , s_bright , s_email , s_phone,s_password) values(?,?,?,?,?,?)";
         try {
@@ -62,6 +64,7 @@ public class StudentDao {
         return false;
     }
 
+    //修改学生数据
     public boolean updateStudent(Student student) {
         String sql = "update student set s_name = ? , s_sex = ? , s_bright = ? , s_email = ? , s_phone = ?,s_password=? WHERE s_id = ?";
         PreparedStatement ps = null;
@@ -84,6 +87,7 @@ public class StudentDao {
         return false;
     }
 
+    //删除学生数据
     public boolean deleteStudent(int id) {
         String sql = "delete from student where s_id = ?";
         PreparedStatement ps = null;
@@ -100,6 +104,7 @@ public class StudentDao {
         return false;
     }
 
+    //通过学生id找到学生
     public Student checkStudentById(int id) {
         String sql = "select * from student where s_id = ?";
         PreparedStatement ps = null;
@@ -127,6 +132,7 @@ public class StudentDao {
         return null;
     }
 
+    //通过学生名字查询展示学生信息
     public List<Student> checkStudentByName(String name) {
         List<Student> list = new ArrayList<>();
         String sql = "select * from student where s_name = ?";
@@ -154,6 +160,7 @@ public class StudentDao {
         return null;
     }
 
+    //通过名字查询是否有该学生
     public boolean queryStudentByName(String name){
         // 1、定义sql语句 占位符?表示一个动态参数入参
         String sql = "select * from student where s_name=?";

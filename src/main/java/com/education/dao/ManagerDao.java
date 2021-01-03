@@ -44,7 +44,7 @@ public class ManagerDao {
 		return null;
 	}
 
-	// 根据用户名密码查询管理员数据
+	// 管理员登录时根据用户名密码查询管理员数据
 	public Manager managerLogin(Manager manager) {
 		// 1、定义sql语句 占位符?表示一个动态参数入参
 		String sql = "select * from manager where e_name=? and e_password=?";
@@ -74,7 +74,7 @@ public class ManagerDao {
 		return null;
 	}
 
-	// 查询所有的管理员数据
+	// 查询展示所有的管理员数据
 	public List<Manager> queryManager() {
 		List<Manager> list = new ArrayList<>();
 		// 1、定义sql语句 占位符?表示一个动态参数入参
@@ -102,7 +102,7 @@ public class ManagerDao {
 		return list;
 	}
 
-	// 添加数据的方法
+	// 添加管理员数据
 	public boolean insertManager(Manager manager) {
 		// 1、定义sql语句 占位符?表示一个动态参数入参
 		String sql = "insert into manager(e_name,e_password) values(?,?)";
@@ -123,7 +123,7 @@ public class ManagerDao {
 		return false;
 	}
 
-	// 修改数据的方法
+	// 修改管理员数据
 	public boolean updateManager(Manager manager) {
 		// 1、定义sql语句 占位符?表示一个动态参数入参
 		String sql = "update manager set e_name=?,e_password=? where e_id=?";
@@ -145,7 +145,7 @@ public class ManagerDao {
 		return false;
 	}
 
-	// 删除数据的方法
+	// 删除管理员数据
 	public boolean deleteManager(int id) {
 		// 1、定义sql语句 占位符?表示一个动态参数入参
 		String sql = "delete from manager where e_id=?";

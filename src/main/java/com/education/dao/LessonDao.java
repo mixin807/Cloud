@@ -13,6 +13,7 @@ import com.education.utils.DataSource;
 public class LessonDao {
     private Connection connection = DataSource.getConnection();
 
+    //查询展示所有课程
     public List<Lesson> LessonQuery() {
         List<Lesson> list = new ArrayList<>();
         String sql = "select * from lesson";
@@ -37,6 +38,7 @@ public class LessonDao {
         return null;
     }
 
+    //添加课程
     public boolean addLesson(Lesson lesson) {
         String sql = "insert into lesson (l_name , l_time , t_name , l_describe) values (?  , ? , ? , ?) ";
         PreparedStatement ps = null;
@@ -57,6 +59,7 @@ public class LessonDao {
         return false;
     }
 
+    //修改课程
     public boolean updateLesson(Lesson lesson) {
         String sql = "update lesson set l_name = ? , l_time = ? ,t_name=?, l_describe = ? where l_id=?";
         PreparedStatement ps = null;
@@ -77,6 +80,7 @@ public class LessonDao {
         return false;
     }
 
+    //删除课程
     public boolean deleteLesson(int id) {
         String sql = "delete from lesson where l_id = ?";
         PreparedStatement ps = null;
@@ -93,6 +97,7 @@ public class LessonDao {
         return false;
     }
 
+    //通过名字查询课程
     public List<Lesson> LessonQueryByName(String name) {
         List<Lesson> list = new ArrayList<>();
         String sql = "select * from lesson where l_name = ?";
@@ -118,6 +123,7 @@ public class LessonDao {
         return null;
     }
 
+    //通过课程id找到课程
     public Lesson LessonQureyById(int id) {
         String sql = "select * from lesson where l_id = ?";
         PreparedStatement ps = null;

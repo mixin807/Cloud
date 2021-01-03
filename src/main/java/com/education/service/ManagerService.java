@@ -5,7 +5,7 @@ import java.util.List;
 import com.education.bean.Manager;
 
 public interface ManagerService {
-	// 定义一些规范的接口方法
+	// 管理员登录方法
 	public Manager managerLogin(Manager manager);
 
 	// 查询所有的管理员数据
