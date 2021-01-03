@@ -77,7 +77,7 @@
         var name = $("#name");
 
         //username失去焦点时，判断是否为空
-        $("#name").blur(function () {
+        name.blur(function () {
             if (name.val().length <= 0) {
                 alert("用户名不能为空！");
             }

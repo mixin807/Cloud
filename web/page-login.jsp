@@ -49,12 +49,6 @@
                                        name="password" placeholder="请输入密码">
                             </div>
                             <font style="color: red;">${message}</font>
-<%--                            <div class="form-group clearfix">--%>
-<%--                                <label class="fancy-checkbox element-left">--%>
-<%--                                    <input type="checkbox">--%>
-<%--                                    <span>Remember me</span>--%>
-<%--                                </label>--%>
-<%--                            </div>--%>
                             <button type="submit" class="btn btn-primary btn-lg btn-block">LOGIN</button>
                             <div class="bottom">
                                 <p class="login-count"></br></br>在线人数：${applicationScope.count}</p>

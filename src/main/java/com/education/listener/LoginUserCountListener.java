@@ -18,6 +18,7 @@ public class LoginUserCountListener implements HttpSessionListener, HttpSessionA
         ServletContext context = se.getSession().getServletContext();
 
         //人数,servletContext中取
+        //若count=1  登录时一进入在线用户人数就为2
         Integer count = (Integer) context.getAttribute("count");
         if (count == null) {
             count = 0;

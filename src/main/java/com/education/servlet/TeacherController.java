@@ -66,7 +66,7 @@ public class TeacherController extends HttpServlet {
     protected void TeacherQuery(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Teacher> list = new ArrayList<>();
         list = teacherService.TeacherQuery();
-        request.getSession().setAttribute("TeacherList", list);
+        request.getSession().setAttribute("TeacherList", list); //用户界面展示所有教师的数据
         request.getRequestDispatcher("/TeacherTables.jsp").forward(request, response);
     }
 
@@ -145,9 +145,8 @@ public class TeacherController extends HttpServlet {
         Teacher login_teacher = teacherService.teacherLogin(teacher);
         // 4、根据结果进行页面跳转
         if (login_teacher != null) {// 有查询到该用户，成功
-            HttpSession session = request.getSession();
-            session.setAttribute("username", name);
-            request.getSession().setAttribute("login_teacher", login_teacher);
+            request.getSession().setAttribute("username", name);
+            request.getSession().setAttribute("login_teacher", login_teacher); //用于前端接收数据显示登录者的用户名
             request.getRequestDispatcher("/teaTeacherQuery").forward(request, response);
         } else {
             request.getRequestDispatcher("/teacherLogin.jsp").forward(request, response);
@@ -242,6 +241,7 @@ public class TeacherController extends HttpServlet {
 		pw.close();
 	}
 
+	//用于登录时验证用户是否合法以及是否已存在
 	protected  void TeacherLoginServlet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html;charset=UTF-8");
 
