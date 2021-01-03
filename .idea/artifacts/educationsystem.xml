@@ -3,6 +3,9 @@
     <output-path>$PROJECT_DIR$/../../tomcat/apache-tomcat-9.0.37/webapps/educationsystem</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="educationsystem" />
+        </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="lib" />
         </element>

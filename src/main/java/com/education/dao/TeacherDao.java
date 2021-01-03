@@ -60,15 +60,16 @@ public class TeacherDao {
     }
 
     public boolean updateTeacher(Teacher teacher) {
-        String sql = "update teacher set t_name = ?,t_sex=?,l_name=?,t_phone=? where t_id = ?";
+        String sql = "update teacher set t_name = ?,t_sex=?,l_name=?,t_phone=?,t_password=? where t_id = ?";
         PreparedStatement ps = null;
         try {
             ps = connection.prepareStatement(sql);
 			ps.setString(1, teacher.getT_name());
-            ps.setInt(2, teacher.getT_id());
-            ps.setString(3,teacher.getT_sex());
+            ps.setString(2,teacher.getT_sex());
             ps.setString(3,teacher.getL_name());
             ps.setString(4,teacher.getT_phone());
+            ps.setString(5,teacher.getT_password());
+            ps.setInt(6, teacher.getT_id());
             int ret = ps.executeUpdate();
             if (ret > 0) {
                 return true;

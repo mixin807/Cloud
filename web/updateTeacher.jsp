@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html;charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
@@ -175,7 +175,7 @@
                             <div class="panel-body">
                                 <input type="hidden" name="t_id" class="form-control"
                                        value="${UpdateTeacher.t_id}">
-                                学生姓名：<input type="text" name="t_name" class="form-control"
+                                教师姓名：<input type="text" name="t_name" class="form-control"
                                             value="${UpdateTeacher.t_name}">
                                 <br> 性别： <label class="fancy-radio"> <input
                                     name="t_sex" value="男" type="radio"
@@ -187,14 +187,11 @@
                                        <c:if test="${UpdateTeacher.t_sex=='女'}">checked="checked"</c:if>>
                                 <span><i></i>女</span>
                             </label>
-                                <br> 所授课程名：<input
-                                    type="text" name="l-name" class="form-control"
+                                <br> 所授课程名：<input type="text" name="l_name" class="form-control"
                                     value="${UpdateTeacher.l_name}">
-                                <br>联系方式：<input
-                                    type="text" name="s_phone" class="form-control"
+                                <br>联系方式：<input type="text" name="t_phone" class="form-control"
                                     value="${UpdateTeacher.t_phone}">
-                                <br>密码：<input
-                                    type="text" name="s_password" class="form-control"
+                                <br>密码：<input type="text" name="t_password" class="form-control"
                                     value="${UpdateTeacher.t_password}">
                             </div>
                             <div class="row">
@@ -209,16 +206,17 @@
                                 </div>
                                 <div class="col-md-2"></div>
                             </div>
+
+                            <!-- END INPUTS -->
+                        </form>
                     </div>
-                    <!-- END INPUTS -->
-                    </form>
                 </div>
             </div>
+            <!-- END MAIN CONTENT -->
         </div>
-        <!-- END MAIN CONTENT -->
+        <!-- END MAIN -->
+        <div class="clearfix"></div>
     </div>
-    <!-- END MAIN -->
-    <div class="clearfix"></div>
 </div>
 <!-- END WRAPPER -->
 <!-- Javascript -->

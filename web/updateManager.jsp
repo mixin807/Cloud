@@ -91,9 +91,6 @@
                                     class="lnr lnr-exit"></i> <span>Logout</span></a></li>
                         </ul>
                     </li>
-                    <!-- <li>
-                            <a class="update-pro" href="#downloads/klorofil-pro-bootstrap-admin-dashboard-template/?utm_source=klorofil&utm_medium=template&utm_campaign=KlorofilPro" title="Upgrade to Pro" target="_blank"><i class="fa fa-rocket"></i> <span>UPGRADE TO PRO</span></a>
-                        </li> -->
                 </ul>
             </div>
         </div>
@@ -165,9 +162,10 @@
                         <form action="/educationsystem/ManagerUpdate">
                             <div class="panel-body">
                                 <input type="hidden" name="e_id" class="form-control"
-                                       value="${UpdateManager.e_id}"> 姓名：<input type="text"
-                                                                                name="e_name" class="form-control"
-                                                                                value="${UpdateManager.e_name}"> <br>
+                                       value="${UpdateManager.e_id}">
+                                姓名：<input type="text"
+                                          name="e_name" class="form-control"
+                                          value="${UpdateManager.e_name}"> <br>
                                 密码：<input
                                     type="text" name="e_password" class="form-control"
                                     value="${UpdateManager.e_password}"> <br>
@@ -184,16 +182,16 @@
                                 </div>
                                 <div class="col-md-2"></div>
                             </div>
+                            <!-- END INPUTS -->
+                        </form>
                     </div>
-                    <!-- END INPUTS -->
-                    </form>
                 </div>
             </div>
+            <!-- END MAIN CONTENT -->
         </div>
-        <!-- END MAIN CONTENT -->
+        <!-- END MAIN -->
+        <div class="clearfix"></div>
     </div>
-    <!-- END MAIN -->
-    <div class="clearfix"></div>
 </div>
 <!-- END WRAPPER -->
 <!-- Javascript -->

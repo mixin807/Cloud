@@ -104,7 +104,7 @@ public class LessonController extends HttpServlet{
 		lesson.setL_describe(l_describe);
 		boolean isOk = lessonService.addLesson(lesson);
 		if(isOk) {
-			request.getRequestDispatcher("/LessonQuery").forward(request, response);
+			request.getRequestDispatcher("/teaLessonQuery").forward(request, response);
 		}else {
 			request.getRequestDispatcher("/taddLesson.jsp").forward(request, response);
 		}

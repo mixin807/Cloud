@@ -45,15 +45,6 @@
                     <i class="lnr lnr-arrow-left-circle"></i>
                 </button>
             </div>
-<%--            <form action="/educationsystem/CollegeQueryName"--%>
-<%--                  class="navbar-form navbar-left">--%>
-<%--                <div class="input-group">--%>
-<%--                    <input type="text" value="${CollegeQueryName}" name="c_name"--%>
-<%--                           class="form-control" placeholder="根据名字进搜索"> <span--%>
-<%--                        class="input-group-btn"><button type="submit"--%>
-<%--                                                        class="btn btn-primary">Go</button></span>--%>
-<%--                </div>--%>
-<%--            </form>--%>
             <div id="navbar-menu">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown"><a href="#"
@@ -98,9 +89,6 @@
                                     class="lnr lnr-exit"></i> <span>Logout</span></a></li>
                         </ul>
                     </li>
-                    <!-- <li>
-                            <a class="update-pro" href="#downloads/klorofil-pro-bootstrap-admin-dashboard-template/?utm_source=klorofil&utm_medium=template&utm_campaign=KlorofilPro" title="Upgrade to Pro" target="_blank"><i class="fa fa-rocket"></i> <span>UPGRADE TO PRO</span></a>
-                        </li> -->
                 </ul>
             </div>
         </div>
@@ -176,7 +164,8 @@
                                 <br>
                                 性别：<label class="fancy-radio"> <input
                                     name="t_sex" value="男" type="radio"> <span><i></i>男</span> </label>
-                                <label class="fancy-radio"> <input name="t_sex" value="女" type="radio"><span><i></i>女</span></label>
+                                <label class="fancy-radio"> <input name="t_sex" value="女"
+                                                                   type="radio"><span><i></i>女</span></label>
                                 <br> 所教课程：<input type="text" name="l_name"
                                                  class="form-control" placeholder="请输入该教师所教课程名">
                                 <br> 联系方式：<input type="text" name="t_phone"
@@ -196,16 +185,16 @@
                                 </div>
                                 <div class="col-md-2"></div>
                             </div>
+                            <!-- END INPUTS -->
+                        </form>
                     </div>
-                    <!-- END INPUTS -->
-                    </form>
                 </div>
             </div>
+            <!-- END MAIN CONTENT -->
         </div>
-        <!-- END MAIN CONTENT -->
+        <!-- END MAIN -->
+        <div class="clearfix"></div>
     </div>
-    <!-- END MAIN -->
-    <div class="clearfix"></div>
 </div>
 <!-- END WRAPPER -->
 <!-- Javascript -->

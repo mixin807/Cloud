@@ -184,16 +184,16 @@
                                 </div>
                                 <div class="col-md-2"></div>
                             </div>
+                            <!-- END INPUTS -->
+                        </form>
                     </div>
-                    <!-- END INPUTS -->
-                    </form>
                 </div>
             </div>
+            <!-- END MAIN CONTENT -->
         </div>
-        <!-- END MAIN CONTENT -->
+        <!-- END MAIN -->
+        <div class="clearfix"></div>
     </div>
-    <!-- END MAIN -->
-    <div class="clearfix"></div>
 </div>
 <!-- END WRAPPER -->
 <!-- Javascript -->
